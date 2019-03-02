@@ -1,0 +1,25 @@
+using System;
+
+namespace analiseDeAlgoritimo
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Digite o que quiser!");
+            String texto = Console.ReadLine();
+            char letra;
+            char[] listaLetras = texto.ToCharArray();
+
+            for (int i = 0; i < listaLetras.Length/2; i++)
+            {
+                letra = listaLetras[i];
+                listaLetras[i] = listaLetras[listaLetras.Length - (i + 1)];
+                listaLetras[listaLetras.Length - (i + 1)] = letra;
+            }
+
+            Console.WriteLine(listaLetras);
+            Console.ReadKey();
+        }
+    }
+}

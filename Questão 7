@@ -44,7 +44,7 @@ namespace analiseDeAlgoritimo
             Ordenar(lista);
 
             Console.WriteLine("--------------------------------------------------------------------");
-            
+            Console.WriteLine("Lista ordenada:");
             for (int a = 0; a < qnt; a++)
             {
                 Console.WriteLine(lista[a]);

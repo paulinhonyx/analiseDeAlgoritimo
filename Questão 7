@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+
+namespace analiseDeAlgoritimo
+{
+    public class Class1
+    {
+
+        public static int[] Ordenar(int[] lista)
+        {
+            int aux = 0;
+            Boolean ordenado = false;
+            while (!ordenado)
+            {
+                ordenado = true;
+
+                for (int i = 0; i < lista.Length - 1; i++)
+                {
+                    if (lista[i] > lista[1 + i])
+                    {
+                        aux = lista[i];
+                        lista[i] = lista[i + 1];
+                        lista[i + 1] = aux;
+                        ordenado = false;
+                    }
+                }
+            }
+
+            return lista;
+        }
+        
+        public static void Main()
+        {
+            Console.WriteLine("Digite 5 numeros inteiros:");
+            int qnt = 5;
+            int[] lista = new int[qnt];
+            
+            
+            for (int i = 0; i < qnt; i++)
+            {
+                lista[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Ordenar(lista);
+
+            Console.WriteLine("--------------------------------------------------------------------");
+            
+            for (int a = 0; a < qnt; a++)
+            {
+                Console.WriteLine(lista[a]);
+                
+            }
+            
+
+        }
+    }
+}

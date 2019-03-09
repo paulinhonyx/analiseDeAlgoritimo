@@ -6,25 +6,30 @@ namespace analiseDeAlgoritimo
     {
         public static int Fibonacci(int n)
         {
-            int a = 0;
-            int b = 1;
-            for (int i = 0; i <= n; i++)
+            int a = 0;  // + 1
+            int b = 1;  // + 1
+            for (int i = 0; i <= n; i++)  // 2n + 2
             {
-                int temp = a;
-                a = b;
-                b = temp + b;
+                int temp = a;  // + n
+                a = b;  // + n
+                b = temp + b;  // + n
             }
-            return a;
+            return a;  // + 1
         }
 
         static void Main()
         {
             Console.WriteLine("digite um valor:");
-            int n = Int32.Parse(Console.ReadLine());
-            for (int i = 0; i <= n; i++)
+            int n = Int32.Parse(Console.ReadLine());  // + 1
+            for (int i = 0; i <= n; i++)  // 2n + 2
             {
-                Console.WriteLine(Fibonacci(i));
+                Console.WriteLine(Fibonacci(i));  // + 0
             }
         }
     }
 }
+
+/*
+1 + 1 + 2n + 2 + n + n + n +1 + 1 + 2n + 2
+7n + 8
+*/

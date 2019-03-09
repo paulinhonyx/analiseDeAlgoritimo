@@ -7,15 +7,15 @@ namespace analiseDeAlgoritimo
         public static void Main(string[] args)
         {
             Console.WriteLine("Digite o que quiser!");
-            String texto = Console.ReadLine();
-            char letra;
-            char[] listaLetras = texto.ToCharArray();
+            String texto = Console.ReadLine();  // +1
+            char letra;  // +0
+            char[] listaLetras = texto.ToCharArray();  // +1
 
-            for (int i = 0; i < listaLetras.Length/2; i++)
+            for (int i = 0; i < listaLetras.Length/2; i++)  //2((2n/2) + 2)
             {
-                letra = listaLetras[i];
-                listaLetras[i] = listaLetras[listaLetras.Length - (i + 1)];
-                listaLetras[listaLetras.Length - (i + 1)] = letra;
+                letra = listaLetras[i];  // n
+                listaLetras[i] = listaLetras[listaLetras.Length - (i + 1)];  // n
+                listaLetras[listaLetras.Length - (i + 1)] = letra;  // n
             }
 
             Console.WriteLine(listaLetras);
@@ -23,3 +23,10 @@ namespace analiseDeAlgoritimo
         }
     }
 }
+
+/*
+1 + 1 + 2((2n/2) + 2) + n + n + n
+1 + 1 + 2(n + 2) +n + n + n
+1 + 1 + 2n + 4 + n + n + n
+5n + 6
+*/
